@@ -1,0 +1,196 @@
+/* ==========================================================================
+   5. FIXED GLASSMORPHIC NAVIGATION HEADER
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand Wordmark Logo */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.brand-logo .logo-dot {
+  color: var(--accent-gold);
+  margin-left: 2px;
+}
+
+.brand-logo:hover {
+  opacity: 0.85;
+}
+
+/* Central Navigation Links */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+/* Gold Item Numbers (01, 02, 03...) */
+.nav-num {
+  font-size: 0.6875rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Active & Hover Link States */
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
+}
+
+/* Animated Hover Line Indicator */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-smooth);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Header Actions & Mobile Hamburger */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-actions .icon-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.header-actions .btn:hover .icon-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Mobile Hamburger Toggle Button (Hidden on Desktop) */
+.mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+/* ==========================================================================
+   NAVIGATION MEDIA QUERIES (RESPONSIVE TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .mobile-nav-toggle {
+    display: flex; /* Show Hamburger Icon on Tablet/Mobile */
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--bg-primary);
+    padding: 40px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-smooth);
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* When JS or CSS toggles active menu */
+  .main-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.125rem;
+    width: 100%;
+  }
+}
