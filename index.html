@@ -1,711 +1,1019 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-mode">
+<html lang="en" dir="ltr">
 <head>
-  <!-- Basic Meta Tags -->
+  <!-- ==========================================================================
+     1. METADATA & CHARACTER ENCODING
+     ========================================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>BIREN VISUALS | Luxury 3D Furniture Assets & Architectural Visualization</title>
-  <meta name="description" content="Official portfolio and asset store of Biren Visuals. Photorealistic 3D sofa assets, custom furniture modeling, and architectural visualization by Biren Murmu.">
-  <meta name="author" content="Biren Murmu">
-  <meta name="keywords" content="3D Furniture Assets, Sofa 3D Model, Architectural Visualization, Blender Furniture, Emerald Palette, CGTrader, Gumroad, TurboSquid">
-  <meta name="theme-color" content="#051F20">
+  <title>Biren Visuals | Premium 3D Furniture Assets & Digital Craftsman</title>
+  <meta name="description" content="Premium production-ready 3D furniture assets for architecture, interior visualization, games, and product rendering. Modeled with clean quad topology and 4K PBR textures.">
+  <meta name="keywords" content="3D Furniture, Furniture Modeling, Archviz Assets, 3D Sofa Models, PBR Materials, Blender Furniture, Marvelous Designer, Unreal Engine Assets, Biren Visuals">
+  <meta name="author" content="Biren Murmu - Biren Visuals">
+  <meta name="robots" content="index, follow">
 
-  <!-- OpenGraph Metadata -->
+  <!-- Open Graph / Facebook / LinkedIn Metadata -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://birenvisuals.github.io/">
-  <meta property="og:title" content="BIREN VISUALS | Luxury 3D Furniture Assets">
-  <meta property="og:description" content="High-end 3D furniture models engineered for photorealistic architectural visualization.">
-  <meta property="og:image" content="https://birenvisuals.github.io/images/og-share-preview.jpg">
+  <meta property="og:title" content="Biren Visuals | 3D Furniture Artist & Digital Craftsman">
+  <meta property="og:description" content="Explore high-end, photorealistic 3D furniture models engineered for archviz, game engines, and commercial visualization.">
+  <meta property="og:image" content="https://birenvisuals.github.io/assets/images/og-preview.jpg">
 
-  <!-- Fonts: Inter & Syne -->
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://birenvisuals.github.io/">
+  <meta name="twitter:title" content="Biren Visuals | 3D Furniture Asset Studio">
+  <meta name="twitter:description" content="Production-ready 3D furniture assets with quad topology and 4K PBR materials.">
+  <meta name="twitter:image" content="https://birenvisuals.github.io/assets/images/og-preview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Google Fonts: Inter (Clean Modern Sans) & Cormorant Garamond (Editorial Luxury Serif) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS Stylesheet Link -->
+  <!-- External Master Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Schema.org Microdata -->
+  <!-- Structured Data / JSON-LD for Google Rich Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Biren Visuals",
-    "image": "https://birenvisuals.github.io/images/hero-sofa.jpg",
-    "@id": "https://birenvisuals.github.io",
     "url": "https://birenvisuals.github.io",
-    "email": "birenvisuals@gmail.com",
-    "priceRange": "$$$",
+    "logo": "https://birenvisuals.github.io/assets/images/logo.png",
+    "description": "Premium 3D furniture asset creation and product visualization studio.",
     "founder": {
       "@type": "Person",
       "name": "Biren Murmu",
       "jobTitle": "3D Furniture Artist"
-    }
+    },
+    "sameAs": [
+      "https://theboldplay6.artstation.com",
+      "https://sketchfab.com/The-bold-play",
+      "https://www.cgtrader.com/designers/birenvisuals",
+      "https://birenvision.gumroad.com",
+      "https://www.turbosquid.com/Search/Artists/birenvisuals",
+      "https://www.linkedin.com/in/biren-murmu-443692426",
+      "https://youtube.com/@existara",
+      "https://www.instagram.com/birenvisuals"
+    ]
   }
   </script>
 </head>
-<body>
+<body id="top">
 
-  <!-- =================================================================== -->
-  <!-- 1. GLOBAL HEADER                                                    -->
-  <!-- =================================================================== -->
-  <header class="site-header" id="header">
-    <div class="container header-container">
+  <!-- ==========================================================================
+     2. HEADER & NAVIGATION BAR
+     ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
       
-      <a href="index.html" class="brand-logo" aria-label="Biren Visuals Homepage">
-        <span class="logo-main">BIREN</span>
-        <span class="logo-sub">VISUALS</span>
-        <span class="logo-dot"></span>
+      <!-- Brand Wordmark Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Biren Visuals Home">
+        <span class="logo-text">BIREN <span class="accent-gold">VISUALS</span></span>
+        <span class="logo-dot">.</span>
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Primary Navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#home" class="nav-link active"><span class="nav-num">01</span>Home</a></li>
-          <li class="nav-item"><a href="#collections" class="nav-link"><span class="nav-num">02</span>Collections</a></li>
-          <li class="nav-item"><a href="#showcase" class="nav-link"><span class="nav-num">03</span>Sofas</a></li>
-          <li class="nav-item"><a href="#services" class="nav-link"><span class="nav-num">04</span>Services</a></li>
-          <li class="nav-item"><a href="#stores" class="nav-link"><span class="nav-num">05</span>3D Store</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link"><span class="nav-num">06</span>About</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link"><span class="nav-num">07</span>Contact</a></li>
+          <li class="nav-item">
+            <a href="#hero" class="nav-link active"><span class="nav-num">01</span> Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#collections" class="nav-link"><span class="nav-num">02</span> Collections</a>
+          </li>
+          <li class="nav-item">
+            <a href="#store" class="nav-link"><span class="nav-num">03</span> Store</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link"><span class="nav-num">04</span> Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link"><span class="nav-num">05</span> About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"><span class="nav-num">06</span> Contact</a>
+          </li>
         </ul>
       </nav>
 
+      <!-- Header Actions -->
       <div class="header-actions">
-        <a href="#contact" class="btn btn-primary-sm">
+        <a href="#contact" class="btn btn-outline">
           <span>Hire Me</span>
-          <svg class="btn-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5"/></svg>
+          <svg class="icon-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
 
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
       </div>
 
     </div>
   </header>
 
+  <!-- ==========================================================================
+     3. MAIN CONTENT CONTAINER
+     ========================================================================== -->
+  <main id="main-content">
 
-  <!-- =================================================================== -->
-  <!-- 2. HERO SECTION                                                    -->
-  <!-- =================================================================== -->
-  <section class="hero-section" id="home">
-    <div class="container hero-container">
-      
-      <div class="hero-content">
-        <div class="hero-label-wrapper">
-          <span class="pulse-dot"></span>
-          <span class="hero-badge-text">Emerald Studio Library 2026</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="title-line">BIREN</span>
-          <span class="title-line title-accent">VISUALS</span>
-        </h1>
-
-        <h2 class="hero-subtitle">3D Furniture Artist & Digital Craftsman</h2>
-
-        <p class="hero-description">
-          Engineered for luxury architectural visualization, interior design, real-time engines, and product rendering. High-precision quad topology with 4K PBR material fidelity.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#showcase" class="btn btn-hero-primary">
-            <span>Explore Sofa Collection</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5"/></svg>
-          </a>
-          <a href="#stores" class="btn btn-hero-secondary">
-            <span>Buy 3D Assets</span>
-          </a>
-        </div>
-
-        <div class="hero-spec-bar">
-          <div class="spec-block">
-            <span class="spec-number">4K</span>
-            <span class="spec-label">PBR Textures</span>
-          </div>
-          <div class="spec-divider"></div>
-          <div class="spec-block">
-            <span class="spec-number">100%</span>
-            <span class="spec-label">Quad Topology</span>
-          </div>
-          <div class="spec-divider"></div>
-          <div class="spec-block">
-            <span class="spec-number">Scale</span>
-            <span class="spec-label">1:1 Real World</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="visual-frame">
-          <img src="images/hero-sofa.jpg" alt="Milano Luxury Modular Sofa 3D Render" class="hero-main-img">
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section id="hero" class="hero-section" aria-label="Hero Introduction">
+      <div class="hero-container">
+        
+        <!-- Left Hero Column: Typography & CTAs -->
+        <div class="hero-content">
           
-          <div class="visual-badge-overlay">
-            <span class="badge-tag">Flagship Piece</span>
-            <span class="badge-title">Milano Modular Sofa</span>
-            <span class="badge-sub">Blender + Marvelous Designer</span>
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">STUDIO & ASSET LIBRARY 2026</span>
           </div>
 
-          <div class="corner-line corner-tl"></div>
-          <div class="corner-line corner-tr"></div>
-          <div class="corner-line corner-bl"></div>
-          <div class="corner-line corner-br"></div>
+          <h1 class="hero-title">
+            <span class="title-primary">BIREN</span>
+            <span class="title-accent">VISUALS</span>
+          </h1>
+
+          <p class="hero-subtitle">3D Furniture Artist & Digital Craftsman</p>
+
+          <p class="hero-description">
+            Premium production-ready 3D furniture assets for architecture, interior visualization, games, and product rendering.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#featured" class="btn btn-solid-gold">
+              <span>Explore Collection</span>
+              <svg class="icon-arrow" width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#store" class="btn btn-border-dark">
+              <span>Buy Assets</span>
+            </a>
+          </div>
+
+          <!-- Key Technical Standards Banner -->
+          <div class="hero-specs-strip">
+            <div class="spec-pill">
+              <svg class="spec-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <div class="spec-text">
+                <strong>4K PBR</strong>
+                <span>Textures</span>
+              </div>
+            </div>
+
+            <div class="spec-pill">
+              <svg class="spec-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+              <div class="spec-text">
+                <strong>100%</strong>
+                <span>Quad Topology</span>
+              </div>
+            </div>
+
+            <div class="spec-pill">
+              <svg class="spec-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+              <div class="spec-text">
+                <strong>Real</strong>
+                <span>World Scale</span>
+              </div>
+            </div>
+
+            <!-- Formats Badges -->
+            <div class="format-badges">
+              <span class="badge-format">FBX</span>
+              <span class="badge-format">OBJ</span>
+              <span class="badge-format">BLEND</span>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Right Hero Column: 3D Render & Interactive Spec Card -->
+        <div class="hero-visual">
+          <div class="hero-render-wrapper">
+            <picture>
+              <source srcset="assets/images/hero-sofa-milano.webp" type="image/webp">
+              <img src="assets/images/hero-sofa-milano.jpg" alt="Milano Modular Sofa 3D Render High Detail" class="hero-render-img" loading="eager" width="1200" height="800">
+            </picture>
+
+            <!-- Floating Flagship Asset Specification Box -->
+            <div class="flagship-spec-card">
+              <div class="card-header-label">
+                <span>FLAGSHIP MODEL</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+
+              <h3 class="flagship-title">Milano Modular Sofa</h3>
+              <hr class="card-divider">
+
+              <dl class="spec-list">
+                <div class="spec-row">
+                  <dt>Software</dt>
+                  <dd>Blender + Marvelous Designer</dd>
+                </div>
+                <div class="spec-row">
+                  <dt>Formats</dt>
+                  <dd>FBX, OBJ, BLEND</dd>
+                </div>
+                <div class="spec-row">
+                  <dt>Poly Count</dt>
+                  <dd>185,742</dd>
+                </div>
+              </dl>
+
+              <button class="spec-card-action" onclick="document.getElementById('modal-milano').showModal()">
+                <span>View Details</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       COLLECTIONS CATEGORY SECTION
+       ========================================================================== -->
+    <section id="collections" class="section-padding collections-section" aria-labelledby="collections-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">CATALOGUE</span>
+          <h2 id="collections-heading" class="section-title">COLLECTIONS</h2>
+        </div>
+
+        <div class="collections-grid">
+          
+          <!-- Category Card 1: Sofas (Active) -->
+          <article class="collection-card active-category">
+            <div class="card-image-wrapper">
+              <img src="assets/images/cat-sofas.jpg" alt="3D Sofa Asset Collection" loading="lazy" width="600" height="400">
+              <div class="card-overlay-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="category-name">Sofas</h3>
+              <a href="#featured" class="category-link">
+                <span>Explore Now</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category Card 2: Tables (Coming Soon) -->
+          <article class="collection-card coming-soon">
+            <div class="card-image-wrapper">
+              <img src="assets/images/cat-tables.jpg" alt="3D Tables Collection Coming Soon" loading="lazy" width="600" height="400">
+              <div class="card-overlay-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="category-name">Tables</h3>
+              <span class="status-badge">Coming Soon</span>
+            </div>
+          </article>
+
+          <!-- Category Card 3: Beds (Coming Soon) -->
+          <article class="collection-card coming-soon">
+            <div class="card-image-wrapper">
+              <img src="assets/images/cat-beds.jpg" alt="3D Beds Collection Coming Soon" loading="lazy" width="600" height="400">
+              <div class="card-overlay-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="category-name">Beds</h3>
+              <span class="status-badge">Coming Soon</span>
+            </div>
+          </article>
+
+          <!-- Category Card 4: Chairs (Coming Soon) -->
+          <article class="collection-card coming-soon">
+            <div class="card-image-wrapper">
+              <img src="assets/images/cat-chairs.jpg" alt="3D Chairs Collection Coming Soon" loading="lazy" width="600" height="400">
+              <div class="card-overlay-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="category-name">Chairs</h3>
+              <span class="status-badge">Coming Soon</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       FEATURED SOFA COLLECTION
+       ========================================================================== -->
+    <section id="featured" class="section-padding featured-section" aria-labelledby="featured-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">FLAGSHIP DESIGNS</span>
+          <h2 id="featured-heading" class="section-title">FEATURED SOFA COLLECTION</h2>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-thumb-container">
+              <img src="assets/images/sofa-milano-thumb.jpg" alt="Milano Modular Sofa Render" class="project-thumb" loading="lazy" width="600" height="450">
+              <button class="project-expand-btn" onclick="document.getElementById('modal-milano').showModal()" aria-label="Open Milano Modular Sofa specs">
+                <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Milano Modular Sofa</h3>
+              <p class="project-tags">Modern • Luxury • Modular</p>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <div class="project-thumb-container">
+              <img src="assets/images/sofa-lorenzo-thumb.jpg" alt="Lorenzo Sectional Sofa Render" class="project-thumb" loading="lazy" width="600" height="450">
+              <button class="project-expand-btn" onclick="document.getElementById('modal-lorenzo').showModal()" aria-label="Open Lorenzo Sectional Sofa specs">
+                <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Lorenzo Sectional Sofa</h3>
+              <p class="project-tags">Comfort • Elegance • Style</p>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card">
+            <div class="project-thumb-container">
+              <img src="assets/images/sofa-curve-thumb.jpg" alt="Curve Lounge Sofa Render" class="project-thumb" loading="lazy" width="600" height="450">
+              <button class="project-expand-btn" onclick="document.getElementById('modal-curve').showModal()" aria-label="Open Curve Lounge Sofa specs">
+                <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Curve Lounge Sofa</h3>
+              <p class="project-tags">Curved • Soft • Contemporary</p>
+            </div>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article class="project-card">
+            <div class="project-thumb-container">
+              <img src="assets/images/sofa-nordic-thumb.jpg" alt="Nordic Leather Sofa Render" class="project-thumb" loading="lazy" width="600" height="450">
+              <button class="project-expand-btn" onclick="document.getElementById('modal-nordic').showModal()" aria-label="Open Nordic Leather Sofa specs">
+                <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </button>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Nordic Leather Sofa</h3>
+              <p class="project-tags">Minimal • Leather • Premium</p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       WHY CHOOSE BIREN VISUALS (TECHNICAL QUALITY & PIPELINE)
+       ========================================================================== -->
+    <section class="section-padding why-us-section" aria-labelledby="why-us-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">STUDIO EXCELLENCE</span>
+          <h2 id="why-us-heading" class="section-title">WHY CHOOSE BIREN VISUALS</h2>
+        </div>
+
+        <div class="features-row">
+          
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Production Ready</h3>
+            <p class="feature-desc">Assets ready for high-end rendering pipelines and real-time visualization.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Quad Topology</h3>
+            <p class="feature-desc">Clean, efficient polyflow and reliable sub-d topology without N-gons.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a10 10 0 0 1 10 10"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">4K Textures</h3>
+            <p class="feature-desc">High resolution PBR texture sets with normal, roughness, and displacement maps.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Optimized Geometry</h3>
+            <p class="feature-desc">Game and real-time engine optimized for smooth frame rates.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="9"/>
+                <line x1="12" y1="3" x2="12" y2="21"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Real Scale</h3>
+            <p class="feature-desc">Accurate real-world metric and imperial dimensions for instant archviz integration.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Commercial Use</h3>
+            <p class="feature-desc">Clear commercial license included for personal and client projects.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       SERVICES SECTION
+       ========================================================================== -->
+    <section id="services" class="section-padding services-section" aria-labelledby="services-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">WHAT I OFFER</span>
+          <h2 id="services-heading" class="section-title">SERVICES</h2>
+        </div>
+
+        <div class="services-grid">
+          
+          <article class="service-card">
+            <div class="service-header">
+              <span class="service-number">01</span>
+              <h3 class="service-title">Furniture Modeling</h3>
+            </div>
+            <p class="service-desc">High quality 3D models with clean sub-d quad topology engineered from physical furniture designs.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-header">
+              <span class="service-number">02</span>
+              <h3 class="service-title">Product Visualization</h3>
+            </div>
+            <p class="service-desc">Photorealistic studio renders, studio lighting, and lifestyle staging that sell your product line.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-header">
+              <span class="service-number">03</span>
+              <h3 class="service-title">Game Ready Assets</h3>
+            </div>
+            <p class="service-desc">Optimized low-poly models with baked normal maps ready for Unreal Engine 5 and Unity pipelines.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-header">
+              <span class="service-number">04</span>
+              <h3 class="service-title">Architectural Assets</h3>
+            </div>
+            <p class="service-desc">Interior and exterior furniture models optimized for archviz scenes and real-time walk-throughs.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-header">
+              <span class="service-number">05</span>
+              <h3 class="service-title">PBR Materials</h3>
+            </div>
+            <p class="service-desc">Realistic tileable fabric, leather, wood, and metal materials crafted with 4K texture maps.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-header">
+              <span class="service-number">06</span>
+              <h3 class="service-title">Custom Furniture Design</h3>
+            </div>
+            <p class="service-desc">Bespoke 3D modeling according to reference images, technical CAD drawings, or concepts.</p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       SOFTWARE & TOOLS
+       ========================================================================== -->
+    <section class="section-padding software-section" aria-labelledby="software-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">WORKFLOW & PIPELINE</span>
+          <h2 id="software-heading" class="section-title">SOFTWARE</h2>
+        </div>
+
+        <div class="software-grid">
+          
+          <div class="software-card">
+            <div class="software-icon">
+              <!-- Blender Logo -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.5 2C10.5 2 9 3.5 9 5.5c0 .3.1.6.2.9L3.5 9.2C3.2 9.1 2.9 9 2.5 9 1.1 9 0 10.1 0 11.5S1.1 14 2.5 14c.4 0 .7-.1 1-.2l5.7 2.8c-.1.3-.2.6-.2.9 0 2 1.5 3.5 3.5 3.5s3.5-1.5 3.5-3.5c0-.3-.1-.6-.2-.9l5.7-2.8c.3.1.6.2 1 .2 1.4 0 2.5-1.1 2.5-2.5S23.9 9 22.5 9c-.4 0-.7.1-1 .2l-5.7-2.8c.1-.3.2-.6.2-.9C16 3.5 14.5 2 12.5 2z"/>
+              </svg>
+            </div>
+            <span class="software-name">Blender</span>
+          </div>
+
+          <div class="software-card">
+            <div class="software-icon">
+              <!-- Substance Painter -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5z"/>
+              </svg>
+            </div>
+            <span class="software-name">Substance Painter</span>
+          </div>
+
+          <div class="software-card">
+            <div class="software-icon">
+              <!-- Photoshop -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="4"/>
+                <text x="7" y="16" font-size="10" font-weight="bold" fill="#0D0D0D">Ps</text>
+              </svg>
+            </div>
+            <span class="software-name">Photoshop</span>
+          </div>
+
+          <div class="software-card">
+            <div class="software-icon">
+              <!-- Unreal Engine -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v12M8 10l4 4 4-4" stroke="#0D0D0D" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="software-name">Unreal Engine</span>
+          </div>
+
+          <div class="software-card">
+            <div class="software-icon">
+              <!-- Unity -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l8 14H4l8-14z"/>
+              </svg>
+            </div>
+            <span class="software-name">Unity</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       BUY 3D ASSETS / STORES
+       ========================================================================== -->
+    <section id="store" class="section-padding store-section" aria-labelledby="store-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">ASSET MARKETPLACES</span>
+          <h2 id="store-heading" class="section-title">BUY 3D ASSETS</h2>
+        </div>
+
+        <div class="store-grid">
+          
+          <!-- CGTrader Card -->
+          <article class="store-card">
+            <div class="store-logo-box cgtrader-color">
+              <span class="store-letter">CG</span>
+            </div>
+            <div class="store-details">
+              <h3 class="store-title">CGTrader</h3>
+              <p class="store-desc">High quality production-ready 3D models for archviz and product professionals.</p>
+              <a href="https://www.cgtrader.com/designers/birenvisuals" target="_blank" rel="noopener noreferrer" class="store-link">
+                <span>Visit Store</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Gumroad Card -->
+          <article class="store-card">
+            <div class="store-logo-box gumroad-color">
+              <span class="store-letter">G</span>
+            </div>
+            <div class="store-details">
+              <h3 class="store-title">Gumroad</h3>
+              <p class="store-desc">Exclusive asset packs, procedural PBR materials, and 3D modeling resources.</p>
+              <a href="https://birenvision.gumroad.com" target="_blank" rel="noopener noreferrer" class="store-link">
+                <span>Visit Store</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- TurboSquid Card -->
+          <article class="store-card">
+            <div class="store-logo-box turbosquid-color">
+              <span class="store-letter">TS</span>
+            </div>
+            <div class="store-details">
+              <h3 class="store-title">TurboSquid</h3>
+              <p class="store-desc">Professional 3D models marketplace certified for studio pipelines.</p>
+              <a href="https://www.turbosquid.com/Search/Artists/birenvisuals" target="_blank" rel="noopener noreferrer" class="store-link">
+                <span>Visit Store</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       ABOUT BIREN VISUALS & STATS
+       ========================================================================== -->
+    <section id="about" class="section-padding about-section" aria-labelledby="about-heading">
+      <div class="container">
+        
+        <div class="about-card-wrapper">
+          
+          <div class="about-image-col">
+            <img src="assets/images/biren-studio-workspace.jpg" alt="Biren Murmu at 3D Workstation" loading="lazy" width="600" height="400">
+          </div>
+
+          <div class="about-content-col">
+            <span class="section-kicker">THE ARTIST</span>
+            <h2 id="about-heading" class="about-title">ABOUT BIREN VISUALS</h2>
+
+            <p class="about-bio">
+              Biren Visuals is a premium 3D furniture studio focused on creating high quality, production-ready assets for architecture, visualization, games, and product rendering.
+            </p>
+
+            <a href="#contact" class="btn btn-outline-gold">
+              <span>Learn More</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="about-stats-col">
+            
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Assets Created</span>
+            </div>
+
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+
+            <div class="stat-item">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       HIRE ME & FREELANCE PLATFORMS
+       ========================================================================== -->
+    <section id="contact" class="section-padding contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">COLLABORATION</span>
+          <h2 id="contact-heading" class="section-title">HIRE ME & CONNECT</h2>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Direct Email Box -->
+          <div class="direct-contact-card">
+            <h3 class="card-subtitle">Direct Contact</h3>
+            <a href="mailto:birenvisuals@gmail.com" class="contact-email">birenvisuals@gmail.com</a>
+            <p class="contact-note">Available for freelance projects, custom modeling, and long-term contracts worldwide.</p>
+          </div>
+
+          <!-- Freelance Platform Badges -->
+          <div class="platforms-box">
+            <h3 class="card-subtitle">Freelance Platforms</h3>
+            
+            <div class="platform-links-grid">
+              <a href="https://www.linkedin.com/in/biren-murmu-443692426" target="_blank" rel="noopener noreferrer" class="platform-btn">
+                <span>LinkedIn</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+
+              <a href="https://www.fiverr.com/birenvisuals" target="_blank" rel="noopener noreferrer" class="platform-btn">
+                <span>Fiverr</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+
+              <a href="https://contra.com/biren_murmu_g1rrpmi5" target="_blank" rel="noopener noreferrer" class="platform-btn">
+                <span>Contra</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+
+              <a href="https://www.freelancer.com/u/birenvisuals" target="_blank" rel="noopener noreferrer" class="platform-btn">
+                <span>Freelancer</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================================================
+     4. PROJECT DETAIL MODALS (ACCESSIBLE LIGHTBOX DIALOGS)
+     ========================================================================== -->
+  
+  <!-- Modal 1: Milano Modular Sofa -->
+  <dialog id="modal-milano" class="project-modal" aria-labelledby="modal-milano-title">
+    <div class="modal-content">
+      
+      <button class="modal-close-btn" onclick="document.getElementById('modal-milano').close()" aria-label="Close dialog">
+        &times;
+      </button>
+
+      <div class="modal-grid">
+        
+        <div class="modal-gallery">
+          <img src="assets/images/sofa-milano-full.jpg" alt="Milano Modular Sofa Full Render" class="modal-hero-img">
+          
+          <div class="modal-thumbs">
+            <img src="assets/images/sofa-milano-front.jpg" alt="Front View" class="m-thumb active">
+            <img src="assets/images/sofa-milano-back.jpg" alt="Back View" class="m-thumb">
+            <img src="assets/images/sofa-milano-wireframe.jpg" alt="Wireframe View" class="m-thumb">
+            <img src="assets/images/sofa-milano-clay.jpg" alt="Clay Render" class="m-thumb">
+          </div>
+        </div>
+
+        <div class="modal-details">
+          <span class="modal-category">SOFA COLLECTION</span>
+          <h2 id="modal-milano-title" class="modal-title">Milano Modular Sofa</h2>
+          <p class="modal-description">
+            Minimalist modular sectional sofa designed for high-end luxury interiors. Features organic curved seating cushions and custom fabric shaders.
+          </p>
+
+          <table class="specs-table">
+            <tr>
+              <th>Software</th>
+              <td>Blender, Marvelous Designer, Substance Painter</td>
+            </tr>
+            <tr>
+              <th>Formats</th>
+              <td>.BLEND, .FBX, .OBJ, .GLTF</td>
+            </tr>
+            <tr>
+              <th>Polygon Count</th>
+              <td>185,742 Quads</td>
+            </tr>
+            <tr>
+              <th>Texture Maps</th>
+              <td>4K PBR (BaseColor, Roughness, Normal, AO)</td>
+            </tr>
+            <tr>
+              <th>Real Scale</th>
+              <td>Width: 320cm | Depth: 180cm | Height: 72cm</td>
+            </tr>
+          </table>
+
+          <div class="modal-actions">
+            <a href="https://birenvision.gumroad.com" target="_blank" rel="noopener noreferrer" class="btn btn-solid-gold">
+              <span>Buy Asset on Gumroad</span>
+            </a>
+            <a href="https://www.cgtrader.com/designers/birenvisuals" target="_blank" rel="noopener noreferrer" class="btn btn-border-dark">
+              <span>View on CGTrader</span>
+            </a>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
-  </section>
+  </dialog>
 
 
-  <!-- =================================================================== -->
-  <!-- 3. FEATURED COLLECTIONS                                             -->
-  <!-- =================================================================== -->
-  <section class="section collections-section" id="collections">
+  <!-- ==========================================================================
+     5. FOOTER
+     ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       
-      <div class="section-meta-header">
-        <div class="meta-left">
-          <span class="section-tag-number">01</span>
-          <span class="section-tag-text">LIBRARY ROADMAP</span>
-        </div>
-        <h2 class="section-title-large">Furniture Collections</h2>
-        <p class="section-intro-text">
-          Our growing repository of hyper-detailed 3D interior assets. Focusing on our flagship Sofa collection, expanding systematically into full furniture suites.
-        </p>
-      </div>
-
-      <div class="category-grid">
+      <div class="footer-top-grid">
         
-        <!-- Sofas (Active) -->
-        <div class="category-card category-card-active">
-          <div class="category-img-box">
-            <img src="images/category-sofa.jpg" alt="3D Sofa Collection" class="category-img">
-            <span class="status-pill status-pill-active">Active Collection</span>
-          </div>
-          <div class="category-body">
-            <div class="category-header-row">
-              <h3 class="category-name">Sofas & Lounges</h3>
-              <span class="item-count">03 Models Available</span>
-            </div>
-            <p class="category-desc">Modular sectionals, organic curved sofas, and lounge seating with realistic cloth compression folds.</p>
-            <a href="#showcase" class="category-cta-link">
-              <span>View Sofa Library</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5"/></svg>
+        <!-- Brand Info Column -->
+        <div class="footer-col brand-col">
+          <a href="#top" class="brand-logo footer-logo">
+            <span>BIREN <span class="accent-gold">VISUALS</span></span>
+          </a>
+          <p class="footer-tagline">3D Furniture Artist & Digital Craftsman</p>
+          <p class="footer-bio">Creating premium 3D assets that bring ideas to life for architectural visualization, products, and real-time engines.</p>
+          
+          <!-- Social Icons -->
+          <div class="social-links">
+            <a href="https://youtube.com/@existara" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.8 31.8 0 0 0 0 12c0 1.9.2 3.8.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.3-2 .5-3.9.5-5.8 0-1.9-.2-3.8-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/birenvisuals" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/biren-murmu-443692426" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.7a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+            <a href="https://theboldplay6.artstation.com" target="_blank" rel="noopener noreferrer" aria-label="ArtStation Portfolio">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 19.5h20L12 2zm0 4.5l6.5 11h-13L12 6.5z"/></svg>
+            </a>
+            <a href="https://sketchfab.com/The-bold-play" target="_blank" rel="noopener noreferrer" aria-label="Sketchfab Store">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.2l6.8 3.8L12 11.8 5.2 8 12 4.2zM5 9.8l6 3.4v6.8l-6-3.4V9.8zm14 6.8l-6 3.4v-6.8l6-3.4v6.8z"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Tables (Coming Soon) -->
-        <div class="category-card category-card-locked">
-          <div class="category-img-box">
-            <div class="placeholder-pattern">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 6h18M4 6v14M20 6v14M10 6v14M14 6v14"/></svg>
-              <span>Architectural Tables</span>
-            </div>
-            <span class="status-pill status-pill-soon">Coming Soon</span>
-          </div>
-          <div class="category-body">
-            <div class="category-header-row">
-              <h3 class="category-name">Dining & Coffee Tables</h3>
-              <span class="item-count">In Modeling</span>
-            </div>
-            <p class="category-desc">Italian marble dining surfaces, solid oak coffee tables, and sculptural brushed metal side tables.</p>
-          </div>
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
 
-        <!-- Beds (Coming Soon) -->
-        <div class="category-card category-card-locked">
-          <div class="category-img-box">
-            <div class="placeholder-pattern">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 18v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8M2 14h20M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/></svg>
-              <span>Luxury Beds</span>
-            </div>
-            <span class="status-pill status-pill-soon">Coming Soon</span>
-          </div>
-          <div class="category-body">
-            <div class="category-header-row">
-              <h3 class="category-name">Beds & Master Suite</h3>
-              <span class="item-count">In Simulation</span>
-            </div>
-            <p class="category-desc">Upholstered bed frames with Marvelous Designer cloth simulations, linen duvets, and pillows.</p>
-          </div>
+        <!-- Column 3: Collections -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">COLLECTIONS</h4>
+          <ul class="footer-links">
+            <li><a href="#featured">Sofas</a></li>
+            <li><span class="muted-link">Tables</span></li>
+            <li><span class="muted-link">Beds</span></li>
+            <li><span class="muted-link">Chairs</span></li>
+            <li><span class="muted-link">Cabinets</span></li>
+            <li><span class="muted-link">Accessories</span></li>
+          </ul>
         </div>
 
-        <!-- Chairs (Coming Soon) -->
-        <div class="category-card category-card-locked">
-          <div class="category-img-box">
-            <div class="placeholder-pattern">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 19v2M18 19v2M4 11v8M20 11v8M5 11h14M6 4h12a2 2 0 0 1 2 2v5H4V6a2 2 0 0 1 2-2z"/></svg>
-              <span>Accent Seating</span>
-            </div>
-            <span class="status-pill status-pill-soon">Coming Soon</span>
-          </div>
-          <div class="category-body">
-            <div class="category-header-row">
-              <h3 class="category-name">Chairs & Armchairs</h3>
-              <span class="item-count">Concept Phase</span>
-            </div>
-            <p class="category-desc">Ergonomic armchairs, dining chairs, and minimalist lounge accent seating pieces.</p>
-          </div>
+        <!-- Column 4: Stores -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">STORES</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.cgtrader.com/designers/birenvisuals" target="_blank" rel="noopener noreferrer">CGTrader</a></li>
+            <li><a href="https://birenvision.gumroad.com" target="_blank" rel="noopener noreferrer">Gumroad</a></li>
+            <li><a href="https://www.turbosquid.com/Search/Artists/birenvisuals" target="_blank" rel="noopener noreferrer">TurboSquid</a></li>
+          </ul>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 4. FLAGSHIP SOFA SHOWCASE                                          -->
-  <!-- =================================================================== -->
-  <section class="section showcase-section" id="showcase">
-    <div class="container">
-      
-      <div class="section-meta-header">
-        <div class="meta-left">
-          <span class="section-tag-number">02</span>
-          <span class="section-tag-text">FLAGSHIP CATALOG</span>
-        </div>
-        <h2 class="section-title-large">The Sofa Collection</h2>
-        <p class="section-intro-text">
-          Explore production specs, quad topology, custom material swatches, and multi-angle renders.
-        </p>
-      </div>
-
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All Sofas</button>
-        <button class="filter-btn" data-filter="modular">Modular</button>
-        <button class="filter-btn" data-filter="curved">Organic / Curved</button>
-      </div>
-
-      <div class="projects-list">
-
-        <!-- PROJECT 1 -->
-        <article class="project-detail-card" data-category="modular">
-          <div class="card-main-grid">
-            
-            <div class="project-visual-column">
-              <div class="main-render-display">
-                <img src="images/sofa-1-main.jpg" alt="Milano Modular Leather Sofa" class="main-render-img" id="project1MainImg">
-                <div class="render-type-badge">Hero Render</div>
-              </div>
-
-              <div class="gallery-thumbnails">
-                <button class="thumb-btn active" data-target="project1MainImg" data-src="images/sofa-1-main.jpg"><span>Hero View</span></button>
-                <button class="thumb-btn" data-target="project1MainImg" data-src="images/sofa-1-front.jpg"><span>Front View</span></button>
-                <button class="thumb-btn" data-target="project1MainImg" data-src="images/sofa-1-back.jpg"><span>Back View</span></button>
-                <button class="thumb-btn" data-target="project1MainImg" data-src="images/sofa-1-wireframe.jpg"><span>Wireframe</span></button>
-                <button class="thumb-btn" data-target="project1MainImg" data-src="images/sofa-1-clay.jpg"><span>Clay Render</span></button>
-                <button class="thumb-btn" data-target="project1MainImg" data-src="images/sofa-1-closeup.jpg"><span>4K Detail</span></button>
-              </div>
-            </div>
-
-            <div class="project-details-column">
-              <div class="project-header">
-                <span class="project-num">SOFA MODEL #01</span>
-                <h3 class="project-title">Milano Modular Leather Sofa</h3>
-                <p class="project-tagline">Architectural modular system inspired by modern Italian living room layouts.</p>
-              </div>
-
-              <p class="project-description-text">
-                Features hyper-realistic physical cloth simulation created in Marvelous Designer, with custom displacement maps for leather grain wrinkles and stitching.
-              </p>
-
-              <!-- Swatches mapped to palette -->
-              <div class="swatches-group">
-                <span class="swatch-group-label">PBR Finish Palette:</span>
-                <div class="swatches-flex">
-                  <div class="swatch-item" title="Forest Black Aniline Leather">
-                    <span class="swatch-color" style="background-color: #051F20;"></span>
-                    <span class="swatch-name">Forest Black</span>
-                  </div>
-                  <div class="swatch-item" title="Deep Sage Velvet">
-                    <span class="swatch-color" style="background-color: #235347;"></span>
-                    <span class="swatch-name">Deep Sage</span>
-                  </div>
-                  <div class="swatch-item" title="Soft Sage Linen">
-                    <span class="swatch-color" style="background-color: #8EB69B;"></span>
-                    <span class="swatch-name">Sage Linen</span>
-                  </div>
-                  <div class="swatch-item" title="Mint Ivory Bouclé">
-                    <span class="swatch-color" style="background-color: #DAF1DE;"></span>
-                    <span class="swatch-name">Mint Bouclé</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tech-table-box">
-                <h4 class="tech-table-title">Technical Specifications</h4>
-                <div class="tech-grid">
-                  <div class="tech-row"><span class="tech-key">Software Stack</span><span class="tech-val">Blender, Marvelous Designer</span></div>
-                  <div class="tech-row"><span class="tech-key">File Formats</span><span class="tech-val">.BLEND, .FBX, .OBJ, .GLTF, .USDZ</span></div>
-                  <div class="tech-row"><span class="tech-key">Polygon Count</span><span class="tech-val">84,200 Quads (Clean UVs)</span></div>
-                  <div class="tech-row"><span class="tech-key">Texture Maps</span><span class="tech-val">4K PBR (Albedo, Normal, Roughness)</span></div>
-                  <div class="tech-row"><span class="tech-key">Scale</span><span class="tech-val">3200mm (W) x 1050mm (D) x 720mm (H)</span></div>
-                </div>
-              </div>
-
-              <div class="card-action-bar">
-                <a href="https://birenvision.gumroad.com" target="_blank" rel="noopener" class="btn btn-buy-gumroad"><span>Buy on Gumroad</span><span class="price-tag">$24</span></a>
-                <a href="https://www.cgtrader.com/designers/birenvisuals" target="_blank" rel="noopener" class="btn btn-buy-cgtrader"><span>Buy on CGTrader</span><span class="price-tag">$24</span></a>
-                <a href="https://www.turbosquid.com/Search/Artists/birenvisuals" target="_blank" rel="noopener" class="btn btn-buy-turbosquid"><span>TurboSquid</span></a>
-              </div>
-
-            </div>
-
-          </div>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 5. 3D WEBGL INSPECTOR                                               -->
-  <!-- =================================================================== -->
-  <section class="section viewer-section" id="interactive-3d">
-    <div class="container">
-      <div class="viewer-wrapper">
-        <div class="viewer-header">
-          <div class="viewer-badge">Interactive 3D Inspector</div>
-          <h3 class="viewer-title">Inspect Geometry & Topology Live</h3>
-          <p class="viewer-desc">Rotate, zoom, and inspect wireframe mesh fidelity directly in your browser.</p>
-        </div>
-
-        <div class="webgl-frame-box">
-          <iframe title="Sketchfab 3D Model Inspector" class="sketchfab-iframe" src="https://sketchfab.com/models/The-bold-play/embed?autostart=0&ui_controls=1&ui_infos=0" allow="autoplay; fullscreen; vr"></iframe>
-        </div>
-
-        <div class="viewer-footer-info">
-          <span>Powered by Sketchfab WebGL &bull; Biren Visuals 3D Repository</span>
-          <a href="https://sketchfab.com/The-bold-play" target="_blank" rel="noopener" class="viewer-link">View Full Sketchfab Profile &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 6. SERVICES SECTION                                                 -->
-  <!-- =================================================================== -->
-  <section class="section services-section" id="services">
-    <div class="container">
-      
-      <div class="section-meta-header">
-        <div class="meta-left">
-          <span class="section-tag-number">03</span>
-          <span class="section-tag-text">CLIENT SERVICES</span>
-        </div>
-        <h2 class="section-title-large">3D Design & Modeling Services</h2>
-        <p class="section-intro-text">Tailored 3D solutions for architects, furniture brands, interior designers, and game studios.</p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-box">
-          <span class="service-index">01</span>
-          <h3 class="service-name">Custom Furniture Modeling</h3>
-          <p class="service-text">Transformation of physical furniture concepts or 2D CAD files into production-ready 3D assets.</p>
-        </div>
-
-        <div class="service-box">
-          <span class="service-index">02</span>
-          <h3 class="service-name">Product Visualization</h3>
-          <p class="service-text">Studio lighting renders and lifestyle interior environments designed for commercial catalogs.</p>
-        </div>
-
-        <div class="service-box">
-          <span class="service-index">03</span>
-          <h3 class="service-name">Real-Time & Game Assets</h3>
-          <p class="service-text">Low-poly optimized models for Unreal Engine 5 and Unity with packed PBR maps.</p>
-        </div>
-
-        <div class="service-box">
-          <span class="service-index">04</span>
-          <h3 class="service-name">Architectural Assets (ArchViz)</h3>
-          <p class="service-text">Ready-to-render assets formatted for 3ds Max, Corona, V-Ray, and Blender pipelines.</p>
-        </div>
-
-        <div class="service-box">
-          <span class="service-index">05</span>
-          <h3 class="service-name">PBR Material Creation</h3>
-          <p class="service-text">Tileable 4K materials including authentic leathers, woven fabrics, and brushed metals.</p>
-        </div>
-
-        <div class="service-box">
-          <span class="service-index">06</span>
-          <h3 class="service-name">3D Catalog Digitization</h3>
-          <p class="service-text">Complete digitizing of physical furniture collections for web 3D configurators and AR.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 7. DIGITAL ASSET STORES                                            -->
-  <!-- =================================================================== -->
-  <section class="section stores-section" id="stores">
-    <div class="container">
-      
-      <div class="section-meta-header">
-        <div class="meta-left">
-          <span class="section-tag-number">04</span>
-          <span class="section-tag-text">BUY DIGITAL ASSETS</span>
-        </div>
-        <h2 class="section-title-large">Asset Marketplaces</h2>
-        <p class="section-intro-text">Download Biren Visuals 3D models securely across leading marketplace platforms.</p>
-      </div>
-
-      <div class="stores-grid">
-        <a href="https://birenvision.gumroad.com" target="_blank" rel="noopener" class="store-card">
-          <div class="store-card-header"><span class="store-brand">GUMROAD</span><span class="store-tag">Official Store</span></div>
-          <p class="store-desc">Direct asset bundles, native Blender project files, procedural shaders, and priority support.</p>
-          <div class="store-footer-link"><span>Visit Gumroad Store</span>&rarr;</div>
-        </a>
-
-        <a href="https://www.cgtrader.com/designers/birenvisuals" target="_blank" rel="noopener" class="store-card">
-          <div class="store-card-header"><span class="store-brand">CGTRADER</span><span class="store-tag">Certified Seller</span></div>
-          <p class="store-desc">Industry-standard 3D furniture models formatted for architectural rendering.</p>
-          <div class="store-footer-link"><span>Visit CGTrader Profile</span>&rarr;</div>
-        </a>
-
-        <a href="https://www.turbosquid.com/Search/Artists/birenvisuals" target="_blank" rel="noopener" class="store-card">
-          <div class="store-card-header"><span class="store-brand">TURBOSQUID</span><span class="store-tag">Enterprise Store</span></div>
-          <p class="store-desc">Enterprise 3D assets checkmate-certified for film, VFX, and commercial advertising.</p>
-          <div class="store-footer-link"><span>Visit TurboSquid Profile</span>&rarr;</div>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 8. FREELANCE PLATFORMS                                             -->
-  <!-- =================================================================== -->
-  <section class="section hire-section" id="hire">
-    <div class="container">
-      
-      <div class="section-meta-header">
-        <div class="meta-left">
-          <span class="section-tag-number">05</span>
-          <span class="section-tag-text">FREELANCE CHANNELS</span>
-        </div>
-        <h2 class="section-title-large">Hire Biren Murmu</h2>
-        <p class="section-intro-text">Book custom 3D projects securely through top international freelance networks.</p>
-      </div>
-
-      <div class="platforms-flex-grid">
-        <a href="https://www.linkedin.com/in/biren-murmu-443692426" target="_blank" rel="noopener" class="platform-tile">
-          <span class="tile-label">NETWORK</span><h3 class="tile-title">LinkedIn</h3><p class="tile-desc">B2B client collaboration, studio contracts, and professional networking.</p>
-        </a>
-
-        <a href="https://contra.com/biren_murmu_g1rrpmi5" target="_blank" rel="noopener" class="platform-tile">
-          <span class="tile-label">NO COMMISSION</span><h3 class="tile-title">Contra</h3><p class="tile-desc">Commission-free contracts with secure milestone payments.</p>
-        </a>
-
-        <a href="https://www.fiverr.com/birenvisuals" target="_blank" rel="noopener" class="platform-tile">
-          <span class="tile-label">DIRECT GIGS</span><h3 class="tile-title">Fiverr Pro</h3><p class="tile-desc">Fixed-price custom 3D modeling packages.</p>
-        </a>
-
-        <a href="https://www.freelancer.com/u/birenvisuals" target="_blank" rel="noopener" class="platform-tile">
-          <span class="tile-label">CONTRACTS</span><h3 class="tile-title">Freelancer</h3><p class="tile-desc">Bid-based architectural asset projects and hiring.</p>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 9. CONTENT ENGINE (YOUTUBE & SOCIALS)                               -->
-  <!-- =================================================================== -->
-  <section class="section journey-section" id="journey">
-    <div class="container">
-      
-      <div class="section-meta-header">
-        <div class="meta-left">
-          <span class="section-tag-number">06</span>
-          <span class="section-tag-text">CREATION ENGINE</span>
-        </div>
-        <h2 class="section-title-large">Follow My Journey</h2>
-        <p class="section-intro-text">Educational content, 3D modeling tutorials, timelapses, and workflows.</p>
-      </div>
-
-      <div class="journey-grid">
-        <a href="https://youtube.com/@existara" target="_blank" rel="noopener" class="journey-card journey-card-youtube">
-          <div class="journey-card-top"><span class="platform-badge">YOUTUBE</span><span class="channel-handle">@existara</span></div>
-          <h3 class="journey-card-title">3D Tutorials & Process Timelapses</h3>
-          <p class="journey-card-desc">Learn sofa modeling, Marvelous Designer cloth simulation, and lighting setup.</p>
-          <div class="journey-card-action"><span>Subscribe @existara</span>&rarr;</div>
-        </a>
-
-        <a href="https://theboldplay6.artstation.com" target="_blank" rel="noopener" class="journey-card">
-          <div class="journey-card-top"><span class="platform-badge">ARTSTATION</span></div>
-          <h3 class="journey-card-title">ArtStation High-Res Portfolio</h3>
-          <p class="journey-card-desc">View uncompressed 8K render passes and wireframe breakdowns.</p>
-          <div class="journey-card-action"><span>View ArtStation</span>&rarr;</div>
-        </a>
-
-        <a href="https://www.instagram.com/birenvisuals" target="_blank" rel="noopener" class="journey-card">
-          <div class="journey-card-top"><span class="platform-badge">INSTAGRAM</span><span class="channel-handle">@birenvisuals</span></div>
-          <h3 class="journey-card-title">Daily Renders & WIP Lighting Studies</h3>
-          <p class="journey-card-desc">Daily visual updates, clay render previews, and material closeups.</p>
-          <div class="journey-card-action"><span>Follow Instagram</span>&rarr;</div>
-        </a>
-
-        <a href="https://www.facebook.com/profile.php?id=61592649966201" target="_blank" rel="noopener" class="journey-card">
-          <div class="journey-card-top"><span class="platform-badge">FACEBOOK</span></div>
-          <h3 class="journey-card-title">Facebook Community Page</h3>
-          <p class="journey-card-desc">Connect with the community and receive model release updates.</p>
-          <div class="journey-card-action"><span>Follow Facebook</span>&rarr;</div>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 10. ABOUT BIREN MURMU                                              -->
-  <!-- =================================================================== -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      
-      <div class="about-grid">
-        <div class="about-text-column">
-          <span class="section-tag-number">07</span>
-          <span class="section-tag-text">STUDIO FOUNDER</span>
-          <h2 class="section-title-large">About Biren Visuals</h2>
-          
-          <p class="about-lead">
-            I am <strong>Biren Murmu</strong>, a 3D Furniture Artist building <strong>Biren Visuals</strong> as a premier digital brand for architectural furniture assets.
-          </p>
-
-          <p class="about-body">
-            My philosophy centers on <strong>specialization and craftsmanship</strong>. Instead of modeling generic objects, I focus deeply on mastering furniture design—starting with our flagship Sofa Collection before expanding into a full architectural furniture library.
-          </p>
-
-          <div class="philosophy-pills">
-            <div class="pill-item"><span class="pill-title">01. Precision Scale</span><span class="pill-desc">Modeled to millimeter accuracy based on real European furniture proportions.</span></div>
-            <div class="pill-item"><span class="pill-title">02. Optimized Topology</span><span class="pill-desc">100% clean quad mesh topology optimized for archviz rendering and real-time engines.</span></div>
-          </div>
-        </div>
-
-        <div class="about-profile-column">
-          <div class="profile-card">
-            <div class="profile-img-frame">
-              <img src="images/biren-murmu.jpg" alt="Biren Murmu - Founder of Biren Visuals" class="profile-img">
-            </div>
-            <div class="profile-meta">
-              <h3 class="profile-name">Biren Murmu</h3>
-              <p class="profile-role">Founder & 3D Furniture Artist</p>
-              <p class="profile-location">Global / Remote Services</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =================================================================== -->
-  <!-- 11. DIRECT CONTACT HUB                                             -->
-  <!-- =================================================================== -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      
-      <div class="contact-box">
-        <span class="contact-tag">DIRECT INQUIRIES</span>
-        <h2 class="contact-heading">Let's Collaborate on Your Next 3D Project</h2>
-        <p class="contact-subtext">Have a custom project in mind or need tailored 3D furniture assets? Reach out directly.</p>
-
-        <div class="email-display-wrapper">
-          <a href="mailto:birenvisuals@gmail.com" class="email-link">
-            <span>birenvisuals@gmail.com</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.5 5L10 10.8333L17.5 5M2.5 15H17.5V5H2.5V15Z" stroke="currentColor" stroke-width="1.5"/></svg>
+        <!-- Column 5: Contact Direct -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-col-title">CONTACT</h4>
+          <a href="mailto:birenvisuals@gmail.com" class="footer-email">birenvisuals@gmail.com</a>
+          <p class="footer-availability">Available for freelance projects worldwide.</p>
+          <a href="#contact" class="btn btn-outline-gold btn-sm">
+            <span>Hire Me</span>
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"/>
+            </svg>
           </a>
         </div>
 
-        <p class="response-time-note">Direct response time: Within 24 hours</p>
       </div>
 
-    </div>
-  </section>
+      <hr class="footer-divider">
 
-
-  <!-- =================================================================== -->
-  <!-- 12. FOOTER                                                          -->
-  <!-- =================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      
-      <div class="footer-col footer-col-brand">
-        <a href="index.html" class="brand-logo">
-          <span class="logo-main">BIREN</span>
-          <span class="logo-sub">VISUALS</span>
-        </a>
-        <p class="footer-desc">Luxury 3D furniture models & architectural visualization studio founded by Biren Murmu.</p>
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Biren Visuals. All Rights Reserved.</p>
+        <p class="designer-credit">Designed & Developed by Biren Visuals</p>
       </div>
 
-      <div class="footer-col">
-        <h4 class="footer-title">Navigation</h4>
-        <ul class="footer-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="#showcase">Sofa Library</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Biren</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-title">Buy 3D Assets</h4>
-        <ul class="footer-list">
-          <li><a href="https://birenvision.gumroad.com" target="_blank" rel="noopener">Gumroad Store</a></li>
-          <li><a href="https://www.cgtrader.com/designers/birenvisuals" target="_blank" rel="noopener">CGTrader Profile</a></li>
-          <li><a href="https://www.turbosquid.com/Search/Artists/birenvisuals" target="_blank" rel="noopener">TurboSquid Store</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-title">Hire Me</h4>
-        <ul class="footer-list">
-          <li><a href="https://www.linkedin.com/in/biren-murmu-443692426" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://contra.com/biren_murmu_g1rrpmi5" target="_blank" rel="noopener">Contra</a></li>
-          <li><a href="https://www.fiverr.com/birenvisuals" target="_blank" rel="noopener">Fiverr</a></li>
-          <li><a href="https://www.freelancer.com/u/birenvisuals" target="_blank" rel="noopener">Freelancer</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-title">Content & Social</h4>
-        <ul class="footer-list">
-          <li><a href="https://youtube.com/@existara" target="_blank" rel="noopener">YouTube (@existara)</a></li>
-          <li><a href="https://theboldplay6.artstation.com" target="_blank" rel="noopener">ArtStation</a></li>
-          <li><a href="https://sketchfab.com/The-bold-play" target="_blank" rel="noopener">Sketchfab</a></li>
-          <li><a href="https://www.instagram.com/birenvisuals" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61592649966201" target="_blank" rel="noopener">Facebook</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
-        <p class="copyright-text">&copy; 2026 BIREN VISUALS. Created by Biren Murmu. All Rights Reserved.</p>
-        <p class="tech-stack-note">Built with Pure HTML5, Modern CSS3, Vanilla JS.</p>
-      </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
