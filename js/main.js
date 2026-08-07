@@ -1,144 +1,150 @@
-/* ==========================================================================
-   BIREN VISUALS - INTERACTIVE JAVASCRIPT ENGINE
-   File Path: js/main.js
-   ========================================================================== */
+/**
+ * BIREN VISUALS — Core Website Functionality
+ * Vanilla JavaScript (ES6+)
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Initialize all interactive components
-  initMobileMenu();
-  initGallerySwitchers();
-  initProjectFilters();
-  initHeaderScroll();
-
-  console.log('BIREN VISUALS Engine initialized successfully.');
-});
-
-
-/* ==========================================================================
-   1. MOBILE NAVIGATION DRAWER TOGGLE
-   ========================================================================== */
-function initMobileMenu() {
-  const mobileToggle = document.getElementById('mobileToggle');
-  const mainNav = document.getElementById('mainNav');
+  /* ==========================================================================
+     1. MOBILE NAVIGATION TOGGLE
+     ========================================================================== */
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const mainNav = document.querySelector('.main-nav');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  if (!mobileToggle || !mainNav) return;
-
-  // Toggle mobile drawer on button click
-  mobileToggle.addEventListener('click', () => {
-    const isOpen = mainNav.classList.contains('active');
-
-    mainNav.classList.toggle('active');
-    mobileToggle.classList.toggle('active');
-
-    // Update accessibility attribute for screen readers
-    mobileToggle.setAttribute('aria-expanded', !isOpen);
-  });
-
-  // Close drawer automatically when clicking any navigation link
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mainNav.classList.contains('active')) {
-        mainNav.classList.remove('active');
-        mobileToggle.classList.remove('active');
-        mobileToggle.setAttribute('aria-expanded', 'false');
-      }
+  if (mobileNavToggle && mainNav) {
+    mobileNavToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      mobileNavToggle.setAttribute('aria-expanded', isOpen);
+      
+      // Prevent body scrolling when mobile overlay is open
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
-  });
-}
 
-
-/* ==========================================================================
-   2. INTERACTIVE SOFA GALLERY THUMBNAIL SWITCHER
-   ========================================================================== */
-function initGallerySwitchers() {
-  const thumbButtons = document.querySelectorAll('.thumb-btn');
-
-  thumbButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Find the parent gallery container of this clicked thumbnail
-      const galleryContainer = button.closest('.project-visual-column');
-      if (!galleryContainer) return;
-
-      // Find the main display image inside this project card
-      const targetImgId = button.getAttribute('data-target');
-      const mainImage = document.getElementById(targetImgId) || galleryContainer.querySelector('.main-render-img');
-      const newSrc = button.getAttribute('data-src');
-
-      if (mainImage && newSrc) {
-        // Smooth opacity transition during image swap
-        mainImage.style.opacity = '0.3';
-
-        setTimeout(() => {
-          mainImage.src = newSrc;
-          mainImage.style.opacity = '1';
-        }, 150);
-      }
-
-      // Deactivate all thumbnail buttons in this specific project card
-      const siblingThumbs = galleryContainer.querySelectorAll('.thumb-btn');
-      siblingThumbs.forEach(thumb => thumb.classList.remove('active'));
-
-      // Activate the clicked thumbnail button
-      button.classList.add('active');
-    });
-  });
-}
-
-
-/* ==========================================================================
-   3. CATEGORY FILTER TABS (SOFA SHOWCASE)
-   ========================================================================== */
-function initProjectFilters() {
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-detail-card');
-
-  if (!filterButtons.length || !projectCards.length) return;
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const selectedFilter = button.getAttribute('data-filter');
-
-      // Update active state on filter buttons
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Filter project cards with smooth fade transitions
-      projectCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-
-        if (selectedFilter === 'all' || cardCategory === selectedFilter) {
-          card.style.display = 'block';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 50);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(20px)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 300);
+    // Close mobile menu automatically when any nav link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mainNav.classList.contains('is-open')) {
+          mainNav.classList.remove('is-open');
+          mobileNavToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
         }
       });
     });
-  });
-}
+  }
 
 
-/* ==========================================================================
-   4. HEADER SCROLL ELEVATION EFFECT
-   ========================================================================== */
-function initHeaderScroll() {
-  const header = document.getElementById('header');
-  if (!header) return;
+  /* ==========================================================================
+     2. HEADER SCROLL EFFECT (BLUR & COMPACT SHADOW)
+     ========================================================================== */
+  const siteHeader = document.querySelector('.site-header');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
+  const handleHeaderScroll = () => {
+    if (window.scrollY > 40) {
+      siteHeader?.classList.add('scrolled');
     } else {
-      header.classList.remove('scrolled');
+      siteHeader?.classList.remove('scrolled');
     }
+  };
+
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+
+
+  /* ==========================================================================
+     3. INTERSECTION OBSERVER FOR ACTIVE NAV LINKS
+     ========================================================================== */
+  const sections = document.querySelectorAll('section[id]');
+
+  if ('IntersectionObserver' in window && sections.length > 0) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -50% 0px', // Triggers when section reaches center viewport
+      threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const activeId = entry.target.getAttribute('id');
+
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${activeId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => sectionObserver.observe(section));
+  }
+
+
+  /* ==========================================================================
+     4. MODAL GALLERY THUMBNAIL SWITCHER
+     ========================================================================== */
+  const modals = document.querySelectorAll('.project-modal');
+
+  modals.forEach(modal => {
+    const mainImg = modal.querySelector('.modal-hero-img');
+    const thumbnails = modal.querySelectorAll('.m-thumb');
+
+    if (mainImg && thumbnails.length > 0) {
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          // Update main image source
+          const newSrc = thumb.getAttribute('src');
+          if (newSrc) {
+            mainImg.setAttribute('src', newSrc);
+            mainImg.setAttribute('alt', thumb.getAttribute('alt') || 'Furniture View');
+          }
+
+          // Update active border state on thumbnails
+          thumbnails.forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+        });
+      });
+    }
+
+    /* Close modal when clicking outside the content box (Backdrop click) */
+    modal.addEventListener('click', (event) => {
+      const rect = modal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= event.clientY &&
+        event.clientY <= rect.top + rect.height &&
+        rect.left <= event.clientX &&
+        event.clientX <= rect.left + rect.width
+      );
+
+      if (!isInDialog) {
+        modal.close();
+      }
+    });
   });
-}
+
+
+  /* ==========================================================================
+     5. SMOOTH SCROLL FOR INTERNAL ANCHORS
+     ========================================================================== */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+
+});
