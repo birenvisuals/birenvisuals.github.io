@@ -1,11 +1,11 @@
 /* ==========================================================================
    BIREN VISUALS - INTERACTIVE JAVASCRIPT ENGINE
-   Pure Vanilla JS (No Frameworks)
+   File Path: js/main.js
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Initialize all interactive modules
+  // Initialize all interactive components
   initMobileMenu();
   initGallerySwitchers();
   initProjectFilters();
@@ -32,7 +32,7 @@ function initMobileMenu() {
     mainNav.classList.toggle('active');
     mobileToggle.classList.toggle('active');
 
-    // Update accessibility attribute
+    // Update accessibility attribute for screen readers
     mobileToggle.setAttribute('aria-expanded', !isOpen);
   });
 
@@ -67,7 +67,7 @@ function initGallerySwitchers() {
       const newSrc = button.getAttribute('data-src');
 
       if (mainImage && newSrc) {
-        // Smooth fade-out transition
+        // Smooth opacity transition during image swap
         mainImage.style.opacity = '0.3';
 
         setTimeout(() => {
@@ -104,7 +104,7 @@ function initProjectFilters() {
       filterButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
-      // Filter project cards
+      // Filter project cards with smooth fade transitions
       projectCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
 
